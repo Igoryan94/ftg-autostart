@@ -1,0 +1,8 @@
+id=ftg-autostart
+name=FTG-autostart
+version=v1.0
+versionCode=100
+author=DfP_DEV
+description=This module gives you Friendly-Telegram mod automatic start after boot. Note that your Termux installation is still required because the module is just an autostart script and your friendly-telegram dir still does what is needed for userbot functionality.
+support=igoryan94@gmail.com
+
