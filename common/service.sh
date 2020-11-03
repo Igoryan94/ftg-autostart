@@ -16,3 +16,9 @@ len=`wc -c $HOME/friendly-telegram/api_token.txt`
 ! pgrep -f friendly-telegram && \
 	cd $HOME/friendly-telegram && python3 -m friendly-telegram &
 
+OWN=`ls -ld /data/data/com.termux/files/home | cut -d\  -f3`
+while :; do
+	chown -R $OWN:$OWN /data/data/com.termux/files
+	echo $BASHPID >/dev/.ftg_autostart_rules.pid
+	sleep 900
+done &

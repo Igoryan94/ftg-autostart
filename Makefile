@@ -8,6 +8,9 @@ EXCLUDE := Makefile README.md *placeholder
 ZIP := $(NAME)-$(DATE).zip
 
 
+main:clean $(ZIP)
+
+
 $(ZIP):
 	@echo "Creating ZIP: $(ZIP)"
 	@zip -r9 "$@" $(INCLUDE) -x $(EXCLUDE)
@@ -17,5 +20,5 @@ push:
 	@adb push $(ZIP) /sdcard/
 
 clean:
-	@-rm *.zip.
+	@-rm *.zip
 	@echo "Clean done."
